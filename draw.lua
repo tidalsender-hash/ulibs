@@ -1,8 +1,88 @@
 local coreGui = game:GetService("CoreGui")
 
+local function randomService()
+    local services = {
+        "AnalyticsService",
+        "AssetService",
+        "BadgeService",
+        "ChangeHistoryService",
+        "Chat",
+        "CollectionService",
+        "ContentProvider",
+        "ContextActionService",
+        "CookiesService",
+        "CoreGui",
+        "Debris",
+        "DebuggerManager",
+        "DraftsService",
+        "DraggerService",
+        "FilteredSelection",
+        "FriendService",
+        "GamePassService",
+        "GamepadService",
+        "Geometry",
+        "GroupService",
+        "GuiService",
+        "HSRDataContentProvider",
+        "HapticService",
+        "HttpRbxApiService",
+        "HttpService",
+        "InsertService",
+        "Instance",
+        "JointsService",
+        "LanguageService",
+        "Lighting",
+        "LocalizationService",
+        "LogService",
+        "MarketplaceService",
+        "MemStorageService",
+        "MeshContentProvider",
+        "NotificationService",
+        "PermissionsService",
+        "PhysicsService",
+        "Players",
+        "PluginDebugService",
+        "PluginGuiService",
+        "PointsService",
+        "PolicyService",
+        "ProcessInstancePhysicsService",
+        "ReplicatedFirst",
+        "ReplicatedStorage",
+        "Run Service",
+        "Script Context",
+        "Selection",
+        "ServerScriptService",
+        "ServerStorage",
+        "SolidModelContentProvider",
+        "SoundService",
+        "StarterGui",
+        "StarterPack",
+        "StarterPlayer",
+        "Stats",
+        "StudioService",
+        "Teams",
+        "Teleport Service",
+        "TestService",
+        "TextService",
+        "TouchInputService",
+        "TweenService",
+        "VRService",
+        "VirtualInputManager",
+        "Visit",
+        "Workspace"
+    }
+
+    local randomIndex = math.random(1, #services)
+    local selectedService = services[randomIndex]
+
+    return {
+        AdService = selectedService
+    }
+end
+
 local camera = workspace.CurrentCamera
 local drawingUI = Instance.new("ScreenGui")
-drawingUI.Name = "Drawing | Xeno"
+drawingUI.Name = randomService().AdService
 drawingUI.IgnoreGuiInset = true
 drawingUI.DisplayOrder = 0x7fffffff
 drawingUI.Parent = coreGui
